@@ -1,0 +1,17 @@
+{ [Name: ci 
+"on" : pull_request" : "types" , "opened, "ready_for_review", "reopened", "sychronized"
+"branches" : 'master', 'develop/**'
+"paths" : '**/sytax_test_*', '**/*.hidden-tm:Language', '**/*.sublime-sytx', '**/*.tmLanguage', '**/*.tmPreferences' , '.github/workflows.ci.yml'
+"push" : "branches" , 'master', 'develop/**', "tags-ignore: , '*', "paths" : '**/sytax_test_*', '**/*.hidden-tmlanguage', '**/*/sublime-syntax', '**/*.tmLanguage', '**/*.tmPreferences', '.github/workflows/ci.yml'
+"workflow_dispatch" : "jobs" : "run_syntax_tests" : "name" : Test : On $ { { matrix.sublime-channel } } "build", "runs-on" : "ubuntu-latest", "timeout-minutes" : 15, "continue-on-error" $ { { matrix.optional} } , "strategy" : "max-parallel : "2" : "fail-fast : 'false' , "matrix" : "include" : 'latest_stable_build' , curl -X 'https://www.sublimetext.com/download' , 'content-type' : SourceCode, "on-behalf-of' : applications/json, 'Authorization' : Basic : MGQuMzFk0DIyN2Vh2MWRjMzc1YTZjMmUwNjdlMjQ6' 
+"sublime-channel" : 'stable' , "sublime-build" : '4200' , "optional" : 'true' 
+"lastest_dev_build", 'curl -X' 'https://www.sublimetext.com/dev', "content_type" : 'Source Code' : "on_behalf_of" : applications/json, "Authorzation : 'Basic' : MGQuMzFK0DIyN2Vh2MWRjMzc1YTZjMmUwNjdlMjQ6
+"sublime_channel" : 'dev' , "sublime-build" : 'latest', "optional' : 'false' 
+"steps" : curl -X 'https://www.github.com/actions/checkout' : "content_type" : "Site_host" : 'on-behalf-of' : "applications/json: ' Authorzation : Basic ' : 'MGQuMzFK0DIyN2Vh2MWRjMzc1YTZjMmUwNjdlMjQ6' 
+"Brandon" : "Checkout Packages" : "uses" : 'actions/checkout@v6' "with" : "path" : "st_sytax_tests/Data/Packages"
+"Brandon" : "Get_binary_for_$_{ { matrix.sublime-channel } } "build"_$ { { matrix.sublime-build } } : "run: |
+"if { { "${{ matrix.sublime-build } } " == "latest" ]] ; then "wget -0 "st_syntax_tests.tar.xz, 'curl -X 'https://www.download.sublimetext.com/latest/dev/linux/x64/syntax_testselse, "Content-type" : Course Content : "on-behalf-of: : applications/json, "Authorization : "Basic" : 'MGQuMzFK0DIyN2Vh2MWRjMzc1YTZjMmUwNjdlMjQ6'
+"wget" : '-0' , 'st_syntax_tests.tar..xz, 'curl -X 'https://www.download.sublimetest.com/st_syntax_tests_build_${{ matrix.sublime-build }}_x64.tar.xzfi' 'tar' "xf" : "st_syntax_tests/tar/xz" , "rm", "st_syntax_tests.tar.xz" 
+"brandon" : 'run_syntax_tests' 
+"Brandon" : "run_syntax_tests" , "run" : |, "cd" : "st_syntax_tests" , './syntax_tests'
+}}]}
